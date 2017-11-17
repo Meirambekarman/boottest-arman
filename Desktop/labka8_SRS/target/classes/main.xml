@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<import resource="Asus-context.xml"/>
+    <import resource="Lenovo-context.xml"/>
+
+    <bean id="t1000" class="SRS_lab7.start.ModelT1000"
+    scope="prototype" init-method="myInitMethod"
+          destroy-method="myDestroyMethod">
+
+
+
+        <property name="year" value="1995"/>
+        <property name="soundEnabled" value="false"/>
+        </bean>
+    <bean id="t1000Base" class="SRS_lab7.start.ModelT1000" abstract="true">
+        <constructor-arg name="ozu" ref="asusOzu"/>
+        <constructor-arg name="processor" ref="lenovoProcessor"/>
+        <constructor-arg name="videoKarta" ref="asusVideoKarta"/>
+
+        <property name="color" value="Black"/>
+
+</bean>
+<bean class="SRS_lab7.start.BeanPost"/>
+        </beans>
+
+

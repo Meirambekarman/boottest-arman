@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="lenovoOzu" class="SRS_lab7.models.Lenovo.LenovoOzu"/>
+    <bean id="lenovoProcessor" class="SRS_lab7.models.Lenovo.LenovoProcessor"/>
+    <bean id="lenovoVideoKarta" class="SRS_lab7.models.Lenovo.LenovoVideoKarta"/>
+</beans>
