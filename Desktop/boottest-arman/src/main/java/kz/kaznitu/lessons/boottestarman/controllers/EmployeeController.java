@@ -71,7 +71,7 @@ public class EmployeeController {
         model.addAttribute("employee",employee);
         return new ModelAndView("smp");
     }
-    @RequestMapping("/editAuthor")
+    @RequestMapping("/editEmployee")
     public String showForm2(Model model){
         model.addAttribute("employee",new Employee());
         return "smp";

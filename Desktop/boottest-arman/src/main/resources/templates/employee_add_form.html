@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            <form action="#" th:action="@{/demo/add}" th:object = "${author}" method="POST">
+            <form action="#" th:action="@{/demo/add}" th:object = "${employee}" method="POST">
                 <hidden th:path="id"/>
                 <label for="firstname">First Name</label>
                 <input type="text" id="firstname" name="firstname" th:field = "*{firstName}" class="form-control" placeholder="Есімін енгіз" />

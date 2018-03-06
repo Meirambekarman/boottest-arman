@@ -19,16 +19,16 @@ public class DepartmentController {
     private DepartmentRepository departmentRepository;
     private long a;
 
-    @RequestMapping("/add")
+    @RequestMapping("/add2")
     public String showForm(Model model) {
         model.addAttribute("department", new Department());
         return "department_add_form";
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add2")
     public String addDepartment(@ModelAttribute Department department) {
         departmentRepository.save(department);
-        return "redirect:/demo/sll2";
+        return "redirect:/dept/sll2";
     }
 
     @GetMapping("/sll")
@@ -47,7 +47,7 @@ public class DepartmentController {
     @RequestMapping(value = "/deleteDepartment", method = RequestMethod.GET)
     public ModelAndView deleteDepartment(@RequestParam("id") long idd) {
         departmentRepository.deleteById(idd);
-        return new ModelAndView("redirect:/demo/sll2");
+        return new ModelAndView("redirect:/dept/sll2");
     }
     @PostMapping("/editDepartment")
     public String editDepartment(@ModelAttribute Department department) {
@@ -56,7 +56,7 @@ public class DepartmentController {
         department1.setDepartmentName(department.getDepartmentName());
         department1.setCity(department.getCity());
         departmentRepository.save(department1);
-        return "redirect:/demo/sll2";
+        return "redirect:/dept/sll2";
     }
 
     @RequestMapping(value = "/editDepartment",method = RequestMethod.GET)

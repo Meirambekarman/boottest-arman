@@ -17,8 +17,8 @@
             <tr th:each = "department : ${departments}">
                 <td th:text = "${department.departmentName}">test</td>
                 <td th:text = "${department.city}">test</td>
-                <td> <a href = '/dept/add'>Add</a></td>
-                <td> <a th:href="@{'/dept/editDepartment?id='+${department.id}}">Edit</a></td>
+                <td> <a href = '/dept/add2'>Add</a></td>
+                <td> <a th:href = "@{'/dept/editDepartment?id='+${department.id}}">Edit</a></td>
                 <td> <a th:href = "@{'/dept/deleteDepartment?id='+${department.id}}">Delete</a></td>
             </tr>
         </table>
